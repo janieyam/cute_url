@@ -20,7 +20,8 @@
         margin: 0;
     }
     body {
-        background-color: #c3cbff; background: -webkit-linear-gradient(to top, #c3cbff, #e5e5e5); background: linear-gradient(to top, #c3cbff, #e5e5e5);
+        background-color: #c3cbff; background: linear-gradient(to top, #c3cbff, #e5e5e5);
+        background-size: 180% 150%;
     }
     
 </style>
@@ -66,20 +67,20 @@
             <button class="btn btn-outline-secondary" type="submit"><i class="bi-send"></i></button>
         </div>
         <?php echo form_close(); ?>
-        <ul class='container border shadow p-5' style=' border-radius: 1rem 1rem 1rem 1rem; background-color: #edeaf9 ; '>
+        <ul class='container border shadow p-5' style='border-radius: 1rem 1rem 1rem 1rem; background-color: #edeaf9; background: linear-gradient(to top, #edeaf9, #c4e0e5) ; '>
             <?php
             foreach ($urls as $elem) {
-                echo '<li><a href="' . site_url('jiane/' . $elem['custom']) . '" target="_blank">' . site_url('cute/' . $elem['custom']) . '</a> redirect to <a href="' . $elem['source_url'] . '" target="_blank">' . $elem['source_url'] . '</a></li>';
+                echo '<li><a href="' . site_url('short/' . $elem['custom']) . '" target="_blank">' . site_url('short/' . $elem['custom']) . '</a> redirect to <a href="' . $elem['source_url'] . '" target="_blank">' . $elem['source_url'] . '</a></li>';
             }
             ?>
         </ul>
     </div>
 
     <div class="container ">
-        <footer class="py-3 ">
+        <footer class="py-3" style="position:fixed-bottom">
             <p class="text-center text-muted mb-0">© 2023 Cute URL - Shorten Your Long Link</p>
             <ul class="nav justify-content-center">
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+                <li class="nav-item"><a href="http://localhost/cute_url/public/admin" class="nav-link px-2 text-muted">Home</a></li>
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Terms of Service</a></li>
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>

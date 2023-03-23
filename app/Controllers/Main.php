@@ -73,24 +73,52 @@ class Main extends BaseController
                     $user_m = new \App\Models\UserAccount();
                     $username = $this->request->getPost('username');
                     $password = $this->request->getPost('pass');
+                    $captcha = $this->request->getPost("g-recaptcha-response");
+                    
+                    //recaptcha verification
+                    $url='https://www.google.com/recaptcha/api/siteverify?';
+                    $secret_key="6LdxFyYlAAAAAAZeoJYbCEGpKC1ejHAHwSxT7Qix";
+                    $recaptcha_data = [
+                        'secret' => $secret_key,
+                        'response' => $captcha,
+                    ];
+                    $options = [
+                        'http' => [
+                        'header' => 'Content-type: application/x-www-form-urlencoded\r\n',
+                        'method' => 'POST',
+                        'content' => http_build_query($recaptcha_data),
+                        ],
+                    ];
+                    $context = stream_context_create($options);
+                    $result = file_get_contents($url, false, $context);
+                    $recaptcha_data = json_decode($result);
+        
 
                     $users_data = $user_m
                         ->where('username', $username)
                         ->findAll();
-
+                            
                     if (count($users_data) > 0) {
 
                         $verify = password_verify($password, $users_data[0]['passw']);
-
-                        if ($verify) {
-                            session()->set('user_session', $users_data[0]);
+                        
+                        //check if user credentials is verified
+                        //check if recaptcha succeeded and checked
+                        if ($verify && $recaptcha_data->success) {
+                            session()->set('user_session', $users_data[0]);                             
                             return redirect()->to('admin');
                         } else {
                             return redirect()->to('login');
                         }
+                                
                     } else {
                         return redirect()->to('login');
                     }
+                        
+                            
+                        
+
+                    
                 }
             case 'register_user': {
 

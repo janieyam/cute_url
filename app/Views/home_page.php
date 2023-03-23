@@ -21,7 +21,8 @@
         margin: 0;
     }
     body {
-        background-color: #c3cbff;
+        background-color: #c3cbff; background: linear-gradient(to top, #c3cbff, #e5e5e5);
+        background-size: 200% 170%;
     }
     
 </style>
@@ -31,62 +32,32 @@
 
 
     <div class="container col-xxl-8 ">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            
-            <div class="col-lg-6">
-                <h1 class="display-5 fw-bold lh-1 ">Experience the magic of short links with CuteURL - the cutest URL shortener out there.</h1>
-                <p class="lead">Transform your long, complicated URLs into short, cute links in seconds - and share them with the world!</p>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <div class="row flex-lg-row-reverse align-items-center py-5">
+            <div class="row-6 mt-5">
+                <img src="<?php echo site_url('assets/img/img3.png') ?>" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="300" height="100" loading="lazy">
+            </div>
+            <div class="row-6">
+                <div class='text-center'>
+                    <h1 class="display-5 fw-bold lh-1 ">cuteURL</h1>
+                </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-5">
                     <a href="<?php echo site_url("login"); ?>" class="btn btn-primary btn-lg px-4 me-md-2">Get Started</a>
                     <a href="<?php echo site_url("login"); ?>" class="btn btn-outline-dark btn-lg px-4">Log in</a>
                 </div>
                 
             </div>
-            <div class="col-10 col-sm-4 col-lg-6">
-                <img src="<?php echo site_url('assets/img/img3.png') ?>" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-            </div>
-        </div>
-    </div>
-
-    <div class="container " id="icon-grid">
-        <div class="row row-cols-1 row-cols-sm-2 g-4 py-5">
-            <div class="col d-flex align-items-start">
-                <i class="bi-arrows-angle-contract text-muted flex-shrink-0 me-3" style="font-size: 2rem;"></i>
-                <div>
-                    <h3 class="fw-bold mb-0 fs-4">Shorten Links</h3>
-                    <p>CuteURL can shorten any link, regardless of its length.</p>
-                </div>
-            </div>
-            <div class="col d-flex align-items-start">
-                <i class="bi-shield-check text-muted flex-shrink-0 me-3" style="font-size: 2rem;"></i>
-                <div>
-                    <h3 class="fw-bold mb-0 fs-4">Secured</h3>
-                    <p>Our service is designed for speed and security, utilizing HTTPS protocol and advanced data encryption measures to ensure that your information remains protected.</p>
-                </div>
-            </div>
-            <div class="col d-flex align-items-start">
-                <i class="bi-hand-thumbs-up text-muted flex-shrink-0 me-3" style="font-size: 2rem;"></i>
-                <div>
-                    <h3 class="fw-bold mb-0 fs-4">Easy</h3>
-                    <p>It's quick and simple to use ShortURL. All you have to do is input the lengthy link, and you'll receive a condensed version in no time.</p>
-                </div>
-            </div>
-            <div class="col d-flex align-items-start">
-                <i class="bi-speedometer2 text-muted flex-shrink-0 me-3" style="font-size: 2rem;"></i>
-                <div>
-                    <h3 class="fw-bold mb-0 fs-4">User-Friendly Dashboard</h3>
-                    <p>Manage your links with ease through our intuitive and user-friendly dashboard.</p>
-                </div>
-            </div>
             
         </div>
     </div>
 
-    <div class="container ">
-        <footer class="py-3 ">
+    
+    </div>
+
+    <div class="container">
+        <footer class="py-3" style="position:fixed-bottom">
             <p class="text-center text-muted mb-0">© 2023 Cute URL - Shorten Your Long Link</p>
             <ul class="nav justify-content-center">
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+                <li class="nav-item"><a href="http://localhost/cute_url/public/" class="nav-link px-2 text-muted">Home</a></li>
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Terms of Service</a></li>
                 <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
