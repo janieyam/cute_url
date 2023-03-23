@@ -32,9 +32,7 @@
 
     <div class="container col-xxl-8 ">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-10 col-sm-8 col-lg-6">
-                <img src="<?php echo site_url('assets/img/img1.png') ?>" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
-            </div>
+            
             <div class="col-lg-6">
                 <h1 class="display-5 fw-bold lh-1 ">Experience the magic of short links with CuteURL - the cutest URL shortener out there.</h1>
                 <p class="lead">Transform your long, complicated URLs into short, cute links in seconds - and share them with the world!</p>
@@ -42,6 +40,10 @@
                     <a href="<?php echo site_url("login"); ?>" class="btn btn-primary btn-lg px-4 me-md-2">Get Started</a>
                     <a href="<?php echo site_url("login"); ?>" class="btn btn-outline-dark btn-lg px-4">Log in</a>
                 </div>
+                
+            </div>
+            <div class="col-10 col-sm-4 col-lg-6">
+                <img src="<?php echo site_url('assets/img/img3.png') ?>" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
             </div>
         </div>
     </div>

@@ -53,7 +53,7 @@
 
     <div class="container mb-5">
 
-    <div class='container border shadow p-5 mt-5 mb-5' style=' border-radius: 1rem 1rem 1rem 1rem; background-color: #ffd89b; background: linear-gradient(to top, #ffd89b, #c4e0e5)'>
+    <div class='container border shadow p-5 mt-5 mb-3' style=' border-radius: 1rem 1rem 1rem 1rem; background-color: #ffd89b; background: linear-gradient(to top, #ffd89b, #c4e0e5)'>
             <h2>Register a New User</h2>
             <?php echo form_open('process/register_user') ?>
             <div class="form-floating mb-3">
@@ -80,7 +80,7 @@
 
         if (isset($edit_user)) {
         ?>
-            <div class='container border shadow p-5 mt-5 mb-5' style=' border-radius: 1rem 1rem 1rem 1rem; background-color: #ffd89b; background: linear-gradient(to top, #ffd89b, #c4e0e5)'>
+            <div class='container border shadow p-5 mb-3' style=' border-radius: 1rem 1rem 1rem 1rem; background-color: #ffd89b; background: linear-gradient(to top, #ffd89b, #c4e0e5)'>
                 <h2>Edit user</h2>
                 <?php echo form_open('process/update_user') ?>
                 <input type="hidden" name="id" value="<?php echo $edit_user['id'] ?>" />
@@ -104,7 +104,7 @@
 
         ?>
 
-        <ul class='container border shadow p-5 mt-5 mb-5' style=' border-radius: 1rem 1rem 1rem 1rem; background-color: #ffd89b; background: linear-gradient(to top, #ffd89b, #c4e0e5)'>
+        <ul class='container border shadow p-5 ' style=' border-radius: 1rem 1rem 1rem 1rem; background-color: #ffd89b; background: linear-gradient(to top, #ffd89b, #c4e0e5)'>
             <?php
             foreach ($users as $elem) {
                 echo "<li class='mb-3'><a href='" . site_url('users') . "?user_id=" . $elem['id'] . "' class='btn btn-warning'>Edit</a> <a href='" . site_url('process/delete_user') . "?user_id=" . $elem['id'] . "' class='btn btn-danger'>Delete</a> Name: " . $elem['short_name'] . ' Username: ' . $elem['username'] . "</li>";

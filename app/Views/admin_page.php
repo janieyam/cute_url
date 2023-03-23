@@ -41,8 +41,11 @@
                 <div class="dropdown text-end">
                     <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="<?php echo "https://i.pravatar.cc/150?u=" . $user['username']; ?>" alt="mdo" width="32" height="32" class="rounded-circle">
+                        
                     </a>
+                    
                     <ul class="dropdown-menu text-small">
+                        <li><a class="dropdown-item border-bottom border-2">Signed in as <?php echo $user['short_name']?></a></li>
                         <li><a class="dropdown-item" href="#">Settings</a></li>
                         <li><a class="dropdown-item" href="#">Profile</a></li>
                         <li>
@@ -56,16 +59,17 @@
     </header>
 
     <div class="container">
+        <h1 class="mt-5 mb-3">Welcome <?php echo $user['short_name']?>!</h1>
         <?php echo form_open('process/add_url'); ?>
         <div class="input-group mb-3">
-            <input type="text" class="form-control form-control-lg" placeholder="Hey, make your URL cute!" name="source_url">
+            <input type="text" class="form-control form-control-lg" placeholder="Make your URL cute!" name="source_url">
             <button class="btn btn-outline-secondary" type="submit"><i class="bi-send"></i></button>
         </div>
         <?php echo form_close(); ?>
         <ul class='container border shadow p-5' style=' border-radius: 1rem 1rem 1rem 1rem; background-color: #edeaf9 ; '>
             <?php
             foreach ($urls as $elem) {
-                echo '<li><a href="' . site_url('cute/' . $elem['custom']) . '" target="_blank">' . site_url('cute/' . $elem['custom']) . '</a> redirect to <a href="' . $elem['source_url'] . '" target="_blank">' . $elem['source_url'] . '</a></li>';
+                echo '<li><a href="' . site_url('jiane/' . $elem['custom']) . '" target="_blank">' . site_url('cute/' . $elem['custom']) . '</a> redirect to <a href="' . $elem['source_url'] . '" target="_blank">' . $elem['source_url'] . '</a></li>';
             }
             ?>
         </ul>
