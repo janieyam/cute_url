@@ -114,11 +114,6 @@ class Main extends BaseController
                     } else {
                         return redirect()->to('login');
                     }
-                        
-                            
-                        
-
-                    
                 }
             case 'register_user': {
 
