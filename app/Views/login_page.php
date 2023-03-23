@@ -18,20 +18,22 @@
         height: 100%;
         width: 100%;
         margin: 0;
+        padding: 0;
     }
     body {
-        background-color: #c3cbff; background: -webkit-linear-gradient(to top, #c3cbff, #e5e5e5); background: linear-gradient(to top, #c3cbff, #e5e5e5);
+        background-color: #c3cbff;
     }
-    .container {
+    
+    /* .container {
         position: absolute;
         top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
-    }
+    } */
 </style>
 <body>
 
-    <div class='container border border-primary border-2 shadow p-5' style=' border-radius: 1rem 1rem 1rem 1rem; background-color: #ffd89b; background: -webkit-linear-gradient(to top, #ffd89b, #c4e0e5); background: linear-gradient(to top, #ffd89b, #c4e0e5)'>
+    <div class='container border shadow p-5 mt-5 mb-5' style=' border-radius: 1rem 1rem 1rem 1rem; background-color: #ffd89b; background: linear-gradient(to top, #ffd89b, #c4e0e5)'>
         <div class="row align-items-center g-lg-5 py-3">
             <div class="col-lg-7 text-center text-lg-start">
                 <h1 class="display-4 fw-bold lh-1 mb-3">Shorten your links with ease</h1>
@@ -51,7 +53,7 @@
                 </div>
                 <div class="checkbox mb-3">
                     <label>
-                        <input type="checkbox" disabled> Remember me
+                        <input type="checkbox" enabled> Remember me
                     </label>
                 </div>
                 <button class="w-100 btn btn-lg btn-primary" type="submit">Log in</button>
@@ -60,16 +62,20 @@
         </div>
         
     </div>
-    <footer class='fixed-bottom'>
-            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                <li class="nav-item"><a href="<?php echo base_url(); ?>" class="nav-link px-2 text-muted">Home  |</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features  |</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing  |</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs  |</a></li>
-                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About  </a></li>
+    <div class="container ">
+        <footer class="py-3 ">
+            <p class="text-center text-muted mb-0">© 2023 Cute URL - Shorten Your Long Link</p>
+            <ul class="nav justify-content-center">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Terms of Service</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
             </ul>
-            <p class="text-center text-muted mb-5">© 2023 Jiane May Q. Paez</p>
+            
         </footer>
+    </div>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
